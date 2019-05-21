@@ -1,0 +1,105 @@
+options:
+	bot: Faster Two
+	botName: Faster Two
+	prefix: f!
+	token: NTc3MTc5OTg4MjkwMzA2MDQ4.XNhTDA.AczdU5UWebLLF8A8NFyq1_3PtCw
+	admins: 577444760416026634
+
+on load:
+	login to "{@token}" with name "{@bot}"
+	mark "{@bot}" as watching "☢Toxic ▶ Skill ▶ Cheat☢"
+	set status of {@bot} to do not disturb
+
+on guild join server:
+	send ":biohazard: %mention tag of event-user%, Bienvenu dans l'équipage !" to channel with name "bienvenu-parmi-nous" with "{@botName}"
+
+on guild leave server:
+	send ":biohazard: %mention tag of event-user%, MAN DOWNNNN !" to channel with name "bienvenu-parmi-nous" with "{@botName}"
+	
+function sendEmbed(embed: embed builder, channel: channel, message: message):
+	set {_m} to a message builder
+	set embed of {_m} to {_embed}
+	send {_m} to {_channel} with "{@bot}" and store it in {_msg}
+	add reaction "x" to {_msg} with "{@bot}"
+	set {{@bot}.%{_msg}%} to {_message}
+
+discord command faster:
+	prefixes: f!
+	bots: {@botName}
+	trigger:
+		create embed:
+			set title of the embed to "Faster's Description"
+			set the description of embed to "Ce n'est pas moi qui cherche le skill, c'est le skill qui me cherche.%nl%- Citation By Faster & Nex0zz"
+			set the author info of the embed to author named "Faster Two" with no url and icon "http://image.noelshack.com/fichiers/2019/19/7/1557681576-splashscreen.png"
+			set the colour of the embed to Red 
+			add field named "Fortnite Tracker" with value "LFaster is VH" to embed
+			set the image of embed to "http://image.noelshack.com/fichiers/2019/19/7/1557681576-splashscreen.png"
+			set the thumbnail of embed to "http://image.noelshack.com/fichiers/2019/19/7/1557681576-splashscreen.png"
+			set the footer of embed to footer with text "Faster's Two" and icon "https://cdn.discordapp.com/attachments/577189693448257536/577193988814274571/ss.png"
+			set the timestamp of embed to now
+		send the last created embed to event-channel with event-bot
+
+discord command !play [<text>]:
+	bots: {@botName}
+	trigger:
+		join voice channel of event-member
+		arg-1 contains ".com":
+			play arg-1
+		else:
+			search youtube for arg 1 and store the results in {_results::*}
+			play {_results::1}
+
+discord command shop:
+	prefixes: f!
+	bots: {@botName}
+	trigger:
+		create embed:
+			set title of the embed to "👉 Fortnite Shop 👈"
+			set the description of embed to "https://fnbr.co/shop"
+			set the author info of the embed to author named "" with no url and icon ""
+			set the colour of the embed to Red 
+			set the image of embed to "https://cdn.discordapp.com/attachments/577561098413146112/579102599018708992/Capture.PNG"
+			set the thumbnail of embed to "https://cdn.discordapp.com/attachments/577189693448257536/577193988814274571/ss.png"
+			set the footer of embed to footer with text "Faster's Two" and icon "https://cdn.discordapp.com/attachments/577189693448257536/577193988814274571/ss.png"
+			set the timestamp of embed to now
+		send the last created embed to event-channel with event-bot
+
+discord command f!create [<text>]:
+	trigger:
+		create voice channel:
+			set the name of the channel to "%arg-1%"
+			set the bitrate of the channel to 69
+			create the channel in event-guild
+		create embed:
+			set the author info of the embed to author named "Faster's Two" with no url and no icon
+			set the description of the embed to "✓ Le channel %arg-1% vient d'être créer!%nl%Le channel se supprime automatiquement dans 10 Heures."
+			set the colour of the embed to Red
+		send the last created embed to event-channel with event-bot
+		wait 100 minutes
+		delete event-channel with event-bot
+
+discord command f!1v1:
+	trigger:
+		create voice channel:
+			set the name of the channel to "🔪 1V1 🔫"
+			set the bitrate of the channel to 69
+			create the channel in event-guild
+		create embed:
+			set the author info of the embed to author named "Faster's Two" with no url and no icon
+			set the description of the embed to "✓ Le channel 🔪 1V1 🔫 vient d'être créer!%nl%Le channel se supprime automatiquement dans 10 Heures."
+			set the colour of the embed to Red
+		send the last created embed to event-channel with event-bot
+
+discord command purge <number>:
+	prefixes: f!
+	bots: {@botName}
+	roles: Staff
+	executable in: guild
+	trigger:
+		set {_num} to arg-1 
+		grab the last {_num} messages in event-channel
+		purge the grabbed messages with event-bot
+		set {_error} to last vixio error 
+		if {_error} is set:
+			stop
+		reply with "%arg-1% messages, ont été supprimés"
