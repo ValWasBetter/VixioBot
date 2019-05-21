@@ -15,3 +15,7 @@ Téléchargez la dernière version de Vixio
 Placez les deux .jar dans votre dossier plugins
 
 Redémarrez votre serveur
+
+# Documentation Vixio
+
+https://alexlew95.github.io/Vixio/documentation/
