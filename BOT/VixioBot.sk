@@ -1,3 +1,4 @@
+# PS: Sur quelques commandes il n'y pas des tabulations, si vous copier coller oublier pas de les mettres!
 options:
 	bot: Faster Two # Le pseudo de ton bot
 	botName: Faster Two # Le pseudo de ton bot
@@ -14,3 +15,17 @@ on guild join server:
 
 on guild leave server:
 	send ":biohazard: %mention tag of event-user%, MAN DOWNNNN !" to channel with name "bienvenu-parmi-nous" with "{@botName}" # Méssage d'aurevoir
+
+discord command /votrecommande <text>:
+    trigger:
+        make embed:
+            set author info of embed to author named "L'auteur de mon embed" with no url and icon "%avatar of event-user%"
+            set title of embed to title with text "Le titre de votre embed"
+            set description of embed to "La description de votre embed"
+            set color of embed to green #la couleur de votre embed
+            add split field named "Ma valeur" with value "La valeur de ma valeur" to field of embed
+            set image of embed to "https://www.ludeek.com/wp-content/uploads/2017/11/dessin-licorne.jpg"
+            set footer of embed to footer with text "Le footer de l'embed"
+            set the thumbnail of embed to "https://cdn.discordapp.com/attachments/236641445363056651/405167105760296971/Logov2.jpg"
+            set the timestamp of embed to now #Le timespan de l'embed
+        reply with last embed
