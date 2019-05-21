@@ -1,14 +1,16 @@
 # VixioBot
-A free vixio bot, i'm updating it daily
+Un bot fait en Vixio en français, je l'update a chaque version de Vixio.
 
 # Vixio
-The Skript Addon made to fit all of your Discord needs. You can join our Discord here: https://discord.gg/kNHmqYH
+L'add-on est fait pour répondre à tous vos besoins de Discord. 
+Vous pouvez rejoindre notre Discord ici: https://discord.gg/kNHmqYH
 
-# Installing
-Download the latest version of Skript
+# Installez Vixio
 
-Download the latest version of Vixio
+Téléchargez la dernière version de Skript
 
-Place both jars in your plugins folder
+Téléchargez la dernière version de Vixio
 
-Restart your server
+Placez les deux .jar dans votre dossier plugins
+
+Redémarrez votre serveur
