@@ -2,7 +2,8 @@
 Un bot fait en Vixio en français, je l'update a chaque version de Vixio.
 
 # Vixio
-L'add-on est fait pour répondre à tous vos besoins de Discord. 
+L'add-on est fait pour répondre à tous vos besoins de Discord.
+
 Vous pouvez rejoindre notre Discord ici: https://discord.gg/kNHmqYH
 
 # Installez Vixio
