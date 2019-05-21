@@ -8,7 +8,6 @@ options:
 on load:
 	login to "{@token}" with name "{@bot}"
 	mark "{@bot}" as watching "✌ VixioBot" # Remplace watching par playing ou listening si tu veux ! Et ✌ VixioBot par ce que tu veux. 
-	set status of {@bot} to online
 
 on guild join server:
 	send ":biohazard: %mention tag of event-user%, Bienvenu dans l'équipage !" to channel with name "bienvenu-parmi-nous" with "{@botName}" # ⛔ Méssage de Bienvenu
