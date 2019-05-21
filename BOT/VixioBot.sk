@@ -1,13 +1,12 @@
 options:
-	bot: Faster Two
-	botName: Faster Two
-	prefix: f!
-	token: NTc3MTc5OTg4MjkwMzA2MDQ4.XNhTDA.AczdU5UWebLLF8A8NFyq1_3PtCw
-	admins: 577444760416026634
+	bot: Faster Two # Le pseudo de ton bot
+	botName: Faster Two # Le pseudo de ton bot
+	prefix: ! # Mets ton Prefix
+	token: NTc3MTc5OTg4MjkwMzA2MDQ4.XXXXXXXXXXXX # Le token de ton bot
 
 on load:
 	login to "{@token}" with name "{@bot}"
-	mark "{@bot}" as watching "☢Toxic ▶ Skill ▶ Cheat☢"
+	mark "{@bot}" as watching ""
 	set status of {@bot} to do not disturb
 
 on guild join server:
