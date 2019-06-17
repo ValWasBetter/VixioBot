@@ -2,20 +2,24 @@
 options:
 	bot: Faster Two # ⛔ Le pseudo de ton bot
 	botName: Faster Two # ⛔ Le pseudo de ton bot
-	prefix: ! # Mets ton Prefix
+	prefix: ! # ⛔ Mets ton Prefix
+	# ⛔ Obtient le token du bot sur https://discordapp.com/developers
 	token: NTc3MTc5OTg4MjkwMzA2MDQ4.XXXXXXXXXXXX # ⛔ Le token de ton bot
 
 on load:
-	login to "{@token}" with name "{@bot}"
-	mark "{@bot}" as watching "✌ VixioBot" # ⛔ Remplace watching par playing ou listening si tu veux ! Et ✌ VixioBot par ce que tu veux. 
+	login to "{@token}" with name "{@bot}" # ⛔ Cette fonctionnalité est pour que votre bot se connecte 
+	mark "{@bot}" as watching "✌ VixioBot" # ⛔ Remplace watching par playing ou listening si tu veux ! Et ✌ VixioBot par ce que tu veux pour définir le  status du bot.
 
-on guild join server:
+on guild join server: # ⛔ Quand quelqu'un rejoint votre serveur ça affiche ce message :
 	send ":biohazard: %mention tag of event-user%, Bienvenu dans l'équipage !" to channel with name "bienvenu-parmi-nous" with "{@botName}" # ⛔ Méssage de Bienvenu
 
-on guild leave server:
+on guild leave server: # ⛔ Quand un membre quitte votre serveur ça affiche ce message :
 	send ":biohazard: %mention tag of event-user%, MAN DOWNNNN !" to channel with name "bienvenu-parmi-nous" with "{@botName}" # ⛔ Méssage d'aurevoir
 
-discord command /votrecommande <text>:
+# ⛔ Ne mettez pas 2 Bots discord fait en Vixio !
+# ⛔ ça va faire buggez le join server & leave server
+
+discord command votrecommande <text>:
     prefixes: !
     bots: {@botName}
     executable in: guild
