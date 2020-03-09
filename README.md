@@ -1,5 +1,5 @@
 # VixioBot
-Un bot fait en Vixio en français, je l'update a chaque version de Vixio.
+Un bot fait en Vixio en français, je l'update a chaque version de Vixio si j'ai pas la flemme parce que j'ai abandonné le sk
 
 # Vixio
 L'add-on est fait pour répondre à tous vos besoins de Discord.
